@@ -7,9 +7,6 @@ from setuptools import setup, find_packages
 with open('readme.md') as readme_file:
     readme = readme_file.read()
 
-with open('HISTORY.rst') as history_file:
-    history = history_file.read()
-
 with open('requirements.txt') as reqs_file:
     requirements = [req for req in reqs_file.readlines()]
 
@@ -33,7 +30,7 @@ setup(
     description="a starter repository for netcdf analysis",
     install_requires=requirements,
     license="MIT license",
-    long_description=readme + '\n\n' + history,
+    long_description=readme,
     include_package_data=True,
     keywords='nc_analysis',
     name='nc_analysis',
