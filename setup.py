@@ -4,15 +4,17 @@
 
 from setuptools import setup, find_packages
 
-with open('README.rst') as readme_file:
+with open('readme.md') as readme_file:
     readme = readme_file.read()
 
 with open('HISTORY.rst') as history_file:
     history = history_file.read()
 
-requirements = [ ]
+with open('requirements.txt') as reqs_file:
+    requirements = [req for req in reqs_file.readlines()]
 
-test_requirements = ['pytest>=3', ]
+with open('requirements_dev.txt') as reqs_file:
+    test_requirements = [req for req in reqs_file.readlines()]
 
 setup(
     author="C. Havlin",
